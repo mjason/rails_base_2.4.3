@@ -9,7 +9,7 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs
 
-RUN apt-get install libmysqld-dev nodejs yarn -y
+RUN apt-get install libmysqld-dev nodejs yarn build-essential patch ruby-dev zlib1g-dev liblzma-dev -y
 
 RUN gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
 RUN gem install bundler
