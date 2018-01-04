@@ -1,5 +1,6 @@
 FROM ruby:2.4.3-slim-jessie
 
+RUN apt-get update
 RUN apt-get install curl apt-transport-https -y
 
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
